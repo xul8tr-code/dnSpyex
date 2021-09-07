@@ -34,7 +34,7 @@ jobs:
         run: |
           .\build.ps1 netframework
           New-Item -ItemType Directory -Path C:\builtfiles -Force > $null
-          Compress-Archive -Path dnSpy\* -DestinationPath C:\builtfiles\dnSpy-netframework.zip
+          Compress-Archive -Path .\* -DestinationPath C:\builtfiles\dnSpy-netframework.zip
           .\clean-all.cmd
           
       - uses: actions/upload-artifact@v2
